@@ -1,3 +1,16 @@
+list.of.packages <- c(
+  "shiny",
+  "plotly",
+  "conflicted",
+  "duckplyr",
+  "tidyr",
+  "scales",
+  "DT"
+  )
+# Comparar output para instalar paquetes
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
 library(shiny)
 library(plotly)
 library(conflicted)
